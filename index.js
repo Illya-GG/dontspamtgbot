@@ -50,6 +50,10 @@ bot.on('message', async (msg) => {
 
         }
     }
-console.log(msgnum);
-console.log(msgarr);
+//console.log(msgnum);
+//console.log(msgarr);
 });
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => res.send('Бот працює'));
+app.listen(PORT, () => console.log(`Сервер запущено на порту ${PORT}`));
